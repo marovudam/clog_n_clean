@@ -1,0 +1,10 @@
+dl=$1
+dl_count=$(echo -n $dl | wc -m)
+dl_max=$(( 200/$dl_count ))
+fl=$(echo $2 | cut -d'.' -f1)
+fl_count=$(echo -n $fl | wc -m)
+fl_max=$(( 200/$fl_count ))
+el=$(echo $2 | cut -d'.' -f2)
+el_count=$(echo -n $el | wc -m)
+el_max=$(( 6/$el_count ))
+size=$(echo $3 | grep -oE '[0-9]+M')
